@@ -10,6 +10,13 @@
 	},
 	"homepage": "http://www.pgm-solutions.com",
 	"license": "MIT",
+	"repository": {
+        "type": "git",
+        "url": "git://github.com/pgmsolutions/excel2lang.git"
+	},
+	"bugs": {
+        "url": "https://github.com/pgmsolutions/excel2lang/issues"
+    },
 	"dependencies": {
 		"mkdirp": "^0.5.1",
 		"xlsx": "^0.14.1",
