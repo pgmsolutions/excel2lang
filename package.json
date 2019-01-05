@@ -1,6 +1,6 @@
 {
 	"name": "excel2lang",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Transforms a XLSX language file into JSON data",
 	"main": "excel2lang.js",
 	"author": {
@@ -11,15 +11,18 @@
 	"homepage": "http://www.pgm-solutions.com",
 	"license": "MIT",
 	"repository": {
-        "type": "git",
-        "url": "git://github.com/pgmsolutions/excel2lang.git"
+		"type": "git",
+		"url": "git://github.com/pgmsolutions/excel2lang.git"
 	},
 	"bugs": {
-        "url": "https://github.com/pgmsolutions/excel2lang/issues"
-    },
+		"url": "https://github.com/pgmsolutions/excel2lang/issues"
+	},
 	"dependencies": {
 		"mkdirp": "^0.5.1",
 		"xlsx": "^0.14.1",
 		"yargs": "^12.0.5"
+	},
+	"bin": {
+		"excel2lang": "./excel2lang.js"
 	}
 }
