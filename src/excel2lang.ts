@@ -1,8 +1,7 @@
 // Imports
-const fs        = require('fs');
-const path      = require('path');
-const mkdirp    = require('mkdirp');
-const XLSX      = require('xlsx');
+import * as fs from 'fs';
+import * as path from 'path';
+import * as XLSX from 'xlsx';
 
 export interface Excel2LangResult {
     success: boolean;
@@ -192,7 +191,7 @@ export default class Excel2Lang {
      */
     private saveCurrent(){
         const folder: string = path.dirname(path.join(path.dirname(this.filepath), this.currentFile));
-        mkdirp.sync(folder);
+        fs.mkdirSync(folder, {recursive: true});
         for(const [language, content] of this.languagesContent){
             const file: string = path.join(path.dirname(this.filepath), this.currentFile.replace(/{lang}/g, language));
             const objectContent: any = Object.create(null);

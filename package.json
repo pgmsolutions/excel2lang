@@ -23,5 +23,8 @@
 	},
 	"bin": {
 		"excel2lang": "./excel2lang.js"
+	},
+	"devDependencies": {
+		"@types/node": "^16.11.12"
 	}
 }
