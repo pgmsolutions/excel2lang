@@ -18,6 +18,7 @@ try {
 
     // Create result table
     const tbl: Table = new Table({
+        style: {head: ['blue']},
         head: ['Language', 'Count', 'Percentage']
     });
     for(const [language, missing] of result.missing){
