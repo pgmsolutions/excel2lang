@@ -26,7 +26,7 @@ try {
         const percentage: number = ((result.count-missing)/result.count);
 
         // Color
-        let color: string = percentage > 0.98 ? 'green' : 'yellow';
+        let color: string = percentage === 1 ? 'green' : 'yellow';
         if(percentage < 0.8){
             color = 'red';
         }
