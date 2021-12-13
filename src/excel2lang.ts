@@ -119,7 +119,7 @@ export default class Excel2Lang {
 
             // Test if string exists
             if(typeof content === 'string' && content.trim().length > 0 && this.languagesContent.has(languageId)){
-                if(this.languagesContent.get(languageId).get(stringId)){
+                if(this.languagesContent.get(languageId).has(stringId)){
                     this.duplicated.add(stringId);
                 }
                 else {
