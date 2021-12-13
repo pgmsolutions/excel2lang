@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "outDir": "./build",
+        "esModuleInterop": true,
         "lib": ["ES2019"],
         "module": "commonjs",
         "removeComments": true,
