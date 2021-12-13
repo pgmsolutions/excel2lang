@@ -113,7 +113,7 @@ export default class Excel2Lang {
             const content: string = i < row.length ? row[i] : null;
 
             // If the first one is empty, abord
-            if(i === 0 && (typeof content !== 'string' || content.trim().length > 0)){
+            if(i === 0 && (typeof content !== 'string' || content.trim().length === 0)){
                 throw new Error(`${stringId} has no default value (first language).`);
             }
 
