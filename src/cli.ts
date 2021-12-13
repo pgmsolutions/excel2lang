@@ -33,7 +33,7 @@ try {
 
         // Push string array for table
         const missingString: string = missing === 0 ? '' : ` (-${missing})`;
-        tbl.push([colors[color](language), colors[color](`${result.count-missing}/${result.count}${missingString}`), colors[color](`${(percentage*100).toFixed(2)}`)]);
+        tbl.push([colors[color](language), colors[color](`${result.count-missing}/${result.count}${missingString}`), colors[color](`${(percentage*100).toFixed(2)}%`)]);
     }
 
     // Display
