@@ -1,8 +1,8 @@
 {
 	"name": "excel2lang",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Transforms a XLSX language file into JSON data",
-	"main": "excel2lang.js",
+	"main": "./bin/excel2lang",
 	"author": {
 		"name": "PGM Solutions",
 		"email": "contact@pgm-solutions.com",
@@ -18,11 +18,22 @@
 		"url": "https://github.com/pgmsolutions/excel2lang/issues"
 	},
 	"dependencies": {
-		"mkdirp": "^0.5.1",
-		"xlsx": "^0.14.1",
-		"yargs": "^12.0.5"
+		"cli-table": "^0.3.11",
+		"colors": "^1.4.0",
+		"commander": "^8.3.0",
+		"xlsx": "^0.17.4"
 	},
 	"bin": {
-		"excel2lang": "./excel2lang.js"
+		"excel2lang": "./bin/excel2lang"
+	},
+	"files": [
+		"LICENCE",
+		"README.md",
+		"build/**/*",
+		"bin/excel2lang"
+	],
+	"devDependencies": {
+		"@types/cli-table": "^0.3.0",
+		"@types/node": "^16.11.12"
 	}
 }
