@@ -27,6 +27,7 @@
 		"excel2lang": "./bin/excel2lang"
 	},
 	"files": [
+		"LICENCE",
 		"README.md",
 		"build/**/*",
 		"bin/excel2lang"
