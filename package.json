@@ -2,7 +2,7 @@
 	"name": "excel2lang",
 	"version": "1.0.1",
 	"description": "Transforms a XLSX language file into JSON data",
-	"main": "excel2lang.js",
+	"main": "./bin/excel2lang",
 	"author": {
 		"name": "PGM Solutions",
 		"email": "contact@pgm-solutions.com",
@@ -24,7 +24,7 @@
 		"xlsx": "^0.17.4"
 	},
 	"bin": {
-		"excel2lang": "./excel2lang.js"
+		"excel2lang": "./bin/excel2lang"
 	},
 	"files": [
 		"README.md",
