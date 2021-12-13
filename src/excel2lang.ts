@@ -53,6 +53,7 @@ export default class Excel2Lang {
         // Create empty map for each language
         languages.forEach((language: string) => {
             this.languagesContent.set(language, new Map());
+            this.missing.set(language, 0);
         });
     }
 
