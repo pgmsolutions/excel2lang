@@ -107,15 +107,10 @@ export default class Excel2Lang {
         }
 
         // For each columns
-        for(let i: number = 0; i < row.length; ++i){
-            // Stop if outside language size
-            if(i > this.languagesContent.size || i > this.languagesList.length){
-                return;
-            }
-
+        for(let i: number = 0; i < this.languagesList.length; ++i){
             // Get language code & content
             const languageId: string = this.languagesList[i];
-            const content: string = row[i];
+            const content: string = i < row.length ? row[i] : null;
 
             // If the first one is empty, abord
             if(i === 0 && (typeof content !== 'string' || content.trim().length > 0)){
