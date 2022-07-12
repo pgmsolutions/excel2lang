@@ -39,6 +39,7 @@ try {
     // Display
     console.log('excel2lang: successfully created file languages.');
     console.log(tbl.toString());
+    console.log('Total words: '+result.words);
 
     // List duplicate
     if(result.duplicate.size > 0){

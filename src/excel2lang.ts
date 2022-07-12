@@ -6,6 +6,7 @@ import * as XLSX from 'xlsx';
 export interface Excel2LangResult {
     success: boolean;
     count: number;
+    words: number;
     missing: Map<string, number>;
     duplicate: Set<string>;
 }
@@ -25,6 +26,8 @@ export default class Excel2Lang {
     private duplicated: Set<string> = new Set();
     /** Number of strings entries */
     private entriesCount: number = 0;
+    /** Number of words */
+    private wordCount: number = 0;
 
     /**
      * Sets the languages
@@ -107,6 +110,7 @@ export default class Excel2Lang {
         }
 
         // For each columns
+        ++this.entriesCount;
         for(let i: number = 0; i < this.languagesList.length; ++i){
             // Get language code & content
             const languageId: string = this.languagesList[i];
@@ -117,13 +121,15 @@ export default class Excel2Lang {
                 throw new Error(`${stringId} has no default value (first language).`);
             }
 
+            // Word counts
+            if(i === 0){
+                this.wordCount += content.split(' ').length;
+            }
+
             // Test if string exists
             if(typeof content === 'string' && content.trim().length > 0 && this.languagesContent.has(languageId)){
                 if(this.languagesContent.get(languageId).has(stringId)){
                     this.duplicated.add(stringId);
-                }
-                else {
-                    ++this.entriesCount;
                 }
                 this.languagesContent.get(languageId).set(stringId, content);
             }
@@ -235,6 +241,7 @@ export default class Excel2Lang {
         return {
             success: true,
             count: this.entriesCount,
+            words: this.wordCount,
             missing: this.missing,
             duplicate: this.duplicated
         };
