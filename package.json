@@ -1,6 +1,6 @@
 {
 	"name": "excel2lang",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Transforms a XLSX language file into JSON data",
 	"main": "./bin/excel2lang",
 	"author": {
